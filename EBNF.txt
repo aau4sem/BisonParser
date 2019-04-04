@@ -1,0 +1,12 @@
+<program> ::= begin <statements> end
+
+<statements> ::= <statement> | <statement> ";" <statements>
+
+<statement> ::= <if_statement>
+
+<if_statement> ::= if <condition> then <statement>
+
+<condition> ::= <boolVal>
+
+<boolVal> ::= "true" | "false"
+
