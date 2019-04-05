@@ -1,9 +1,16 @@
-%{
+%{ 						//STUFF INSIDE THESE ARE JUST COPYED DIRECLY TO THE GENERATED LEXER (Flex)
+int yyerror(char *s);
+int yylex(void);
 
+extern int yylex(); 				// Declaration of function
+
+#include "lex.yy.c"  // to get the token types from Bison
 
 %}
 
 %start	program
+
+%option noyywrap				//Stops flex from looking for something
 
 %token	<int_val>	INTEGER_LITERAL
 %type	<int_val>	exp

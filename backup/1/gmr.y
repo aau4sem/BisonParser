@@ -1,5 +1,11 @@
 %{
+#include "heading.h"
+int yyerror(char *s);
+int yylex(void);
 
+extern int yylex();
+
+#include "lex.yy.c"  // to get the token types from Bison
 
 %}
 
